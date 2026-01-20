@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Internship Day1 Lesson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day1 HTML</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>HTML Assignment</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#demo">Demo</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to My Workspace</h2>
+    <p>I'm a <strong>Frontend Developer</strong> in training.</p>
+    <hr>
+  </section>
+
+  <section id="demo">
+    <h2>Tags and Elements Demonstration</h2>
+
+    <div>
+      <p>This is Hyperlink:</p>
+      <a href="https://www.google.com/" target="_blank">Google</a>
+      <p>This is Anchor link:</p>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div>
+      <h3>HTML Media Demonstration</h3>
+      <img src="./images/test.jpg" alt="testing image" width="300px" height="300px">
+
+      <audio controls>
+        <source src="./images/SampleAudio.mp3" type="audio/mp3">
+      </audio>
+
+      <video controls width="300px" height="300px">
+        <source src="./images/SampleVideo.mp4" type="video/mp4">
+      </video>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.50356653369!2d96.12721877367527!3d16.850966318039664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c195a72ebbce3f%3A0xedb26d5ff07c1132!2sInnovix%20Solutions!5e0!3m2!1sen!2smm!4v1768903889308!5m2!1sen!2smm" width="300" height="300" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Kiwi</li>
+        <li>Stawberry</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Coffee</li>
+        <li>tea</li>
+        <li>Cola</li>
+        <li>Milo</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3>Description List</h3>
+      <dl>
+        <dt>Apple</dt>
+        <dd>This is fruit.</dd>
+
+        <dt>Coffee</dt>
+        <dd>This is drink.</dd>
+      </dl>
+    </div>
+
+    <div>
+      <h3>Table Demonstration</h3>
+      <table>
+        <caption>Weekly Learning Progress</caption>
+        <tr>
+          <th>Day</th>
+          <th>Topic</th>
+          <th>Status</th>
+        </tr>
+
+        <tr>
+          <td>Mon</td>
+          <td>Intro</td>
+          <td>Done</td>
+        </tr>
+
+        <tr>
+          <td>Tue</td>
+          <td>HTML</td>
+          <td>Done</td>
+        </tr>
+
+        <tr>
+          <td>Wed</td>
+          <td>CSS</td>
+          <td>Not Started</td>
+        </tr>
+
+        <tr>
+          <td>Thurs</td>
+          <td>CSS</td>
+          <td>Not Started</td>
+        </tr>
+
+        <tr>
+          <td>Fri</td>
+          <td>Assignment1</td>
+          <td>Not Started</td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+  </section>
+
+  <section id="contact">
+    <h3>Send me a message:</h3>
+
+    <form action="" method="post">
+      <label for="name">Enter Your Name:</label>
+      <input type="text" id="name" name="name" value="Inkyinn" required><br><br>
+
+      <label for="email">Enter Your Email:</label>
+      <input type="email" name="email" id="email" required><br><br>
+
+      <input type="radio" name="gender" id="male" value="Male">
+      <label for="male">Male</label>
+
+      <input type="radio" name="gender" id="female" value="Female">
+      <label for="female">Female</label><br><br>
+
+      <label for="priority">Priority:</label>
+      <select name="priority" id="priority">
+        <option value="low">Low</option>
+        <option value="high">High</option>
+      </select><br><br>
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" rows="5" cols="30"></textarea><br><br>
+
+      <button type="submit">Submit</button>
+      <br>
+      <hr>
+    </form>
+  </section>
+
+  <footer>
+    <p>That's all. This is my HTML Testing and Demonstration. Thank you very much...</p>
+  </footer>
+</body>
+
+</html>
