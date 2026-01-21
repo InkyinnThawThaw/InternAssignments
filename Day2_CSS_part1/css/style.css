@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  width: 100%;
+  padding: 20px 50px;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  background: #333;
+  color: #fff;
+}
+
+.header .gnav {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.header .gnav a {
+  padding: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.gnav a:hover {
+  background: #f3dcbe;
+  color: #000;
+  transition: 0.3s ease-out;
+  border-radius: 5px;
+}
+
+.hero-section {
+  margin-top: 90px;
+  margin-bottom: 30px;
+  padding: 180px 20px;
+  background: url("/Day2_CSS_part1/images/test.jpg") no-repeat center/cover;
+  text-align: center;
+}
+
+.grid-title {
+  margin: 20px 0;
+  color: #333;
+  text-align: center;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 20px;
+}
+
+.card-featured {
+  position: relative;
+  justify-content: center !important;
+  background: #f6d6ab !important;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px 12px;
+  background: #cbc8c8;
+  border-radius: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  transition: 0.3s ease-in;
+  border-radius: 15px;
+}
+
+.card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  border-color: #f3dcbe;
+}
+
+.contact-form {
+  margin: 70px auto;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.contact-form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px 25px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background: #555;
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}

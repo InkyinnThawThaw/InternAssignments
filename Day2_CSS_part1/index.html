@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day2 CSS Part1</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">MyWebsite</div>
+    <nav>
+      <ul class="gnav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <h1>Welcome to My Website</h1>
+    <p>Learning CSS display, position and box model is fun!</p>
+  </section>
+
+  <section id="project" class="grid-container">
+    <h2 class="grid-title">Latest Projects</h2>
+    <div class="grid-layout">
+      <div class="card card-featured">
+        <div class="badge">Featured</div>
+        <h3>Modern Web Design</h3>
+        <p>Mastering CSS Grid is essential for modern developers.</p>
+      </div>
+
+      <div class="card">
+        <h3>Flexbox Guide</h3>
+        <p>Alignment made easy.</p>
+      </div>
+
+      <div class="card">
+        <h3>Box Model</h3>
+        <p>Understanding Margin & Padding.</p>
+      </div>
+
+      <div class="card">
+        <h3>Javascript Tips</h3>
+        <p>Interactivity for your site.</p>
+      </div>
+
+      <div class="card">
+        <h3>UI/UX Basics</h3>
+        <p>User-centered design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-form">
+      <h2>Send me a message:</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" cols="30"></textarea>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; Intern Day2 CSS part1</p>
+  </footer>
+</body>
+
+</html>
