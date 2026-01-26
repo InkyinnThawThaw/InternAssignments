@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url(../assets/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url(../assets/fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  src: url("../assets/fonts/Inter-ExtraBold.ttf");
+}
+
+:root {
+  --clr-soft-orange: hsl(35, 77%, 62%);
+  --clr-soft-red: hsl(5, 85%, 63%);
+  --clr-off-white: hsl(36, 100%, 99%);
+  --clr-grayish-blue: hsl(233, 8%, 79%);
+  --clr-dark-grayish-blue: hsl(236, 13%, 42%);
+  --clr-very-dark-blue: hsl(240, 100%, 5%);
+  --fs-body: 15px;
+}
+
+body {
+  background-color: var(--clr-off-white);
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-body);
+  font-weight: 400;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cmn-txt {
+  padding-bottom: 30px;
+  color: var(--clr-dark-grayish-blue);
+}
+
+.cmn-ttl {
+  color: var(--clr-off-white);
+  font-size: 16px;
+}
+
+.cmn-ttl:hover {
+  color: var(--clr-soft-orange);
+  transition: 0.3s;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 0 20px;
+  background: var(--clr-off-white);
+}
+
+.l-inner {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.menu-toggle,
+.menu-close {
+  display: none;
+  border: none;
+  background: none;
+}
+
+.gnav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.gnav ul li a {
+  color: var(--clr-dark-grayish-blue);
+  text-decoration: none;
+}
+
+.gnav ul li a:hover {
+  color: var(--clr-soft-red);
+  transition: 0.3s;
+}
+
+.hero-section {
+  margin-top: 110px;
+  margin-bottom: 60px;
+}
+
+.hero-container .col1 {
+  width: 67%;
+}
+
+.col1 img {
+  width: 100%;
+}
+
+.col1-content-blk {
+  margin-top: 15px;
+}
+
+.col1-content-blk .content-ttl {
+  width: 35%;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.col1-content-blk .content-txt-blk {
+  width: 55%;
+}
+
+.col1-content-blk .content-txt {
+  line-height: 1.2;
+  padding-bottom: 20px;
+  color: var(--clr-dark-grayish-blue);
+}
+
+.read-more-btn {
+  padding: 10px 20px;
+  border: none;
+  background: var(--clr-soft-red);
+  font-weight: 700;
+}
+
+.read-more-btn:hover {
+  background: var(--clr-very-dark-blue);
+  color: var(--clr-off-white);
+}
+
+.hero-container .col2 {
+  width: 30%;
+  padding: 0 20px;
+  background: var(--clr-very-dark-blue);
+}
+
+.col2-ttl {
+  color: var(--clr-soft-orange);
+}
+
+.line {
+  border-bottom: 1px solid var(--clr-dark-grayish-blue);
+}
+
+.hot-picks-section {
+  margin-bottom: 100px;
+}
+
+.hot-picks-card {
+  width: 30%;
+}
+
+.hot-picks-img {
+  width: 27%;
+}
+
+.hot-picks-img img {
+  width: 100%;
+}
+
+.hot-picks-content-blk {
+  width: 65%;
+}
+
+.hot-picks-number {
+  color: var(--clr-soft-red);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.hot-picks-ttl {
+  margin: 10px 0;
+  font-size: var(--fs-body);
+}
+
+.hot-picks-ttl:hover {
+  color: var(--clr-soft-red);
+  transition: 0.3s;
+}
+
+.hot-picks-txt {
+  color: var(--clr-dark-grayish-blue);
+  font-size: 13px;
+}
+
+@media (max-width : 767px) {
+
+  .menu-toggle,
+  .menu-close {
+    display: block;
+  }
+
+  .gnav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    padding: 150px 0;
+    background: var(--clr-off-white);
+    transition: 0.5s;
+  }
+
+  .gnav.is-show {
+    right: 0;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+  }
+
+  .gnav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .gnav ul li {
+    width: 100%;
+  }
+
+  .gnav ul li a {
+    color: var(--clr-very-dark-blue);
+    font-size: 18px;
+  }
+
+  .hero-section {
+    margin-bottom: 40px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-container .col1 {
+    width: 100%;
+  }
+
+  .col1-content-blk {
+    flex-direction: column;
+  }
+
+  .col1-content-blk .content-ttl {
+    width: 90%;
+  }
+
+  .col1-content-blk .content-txt-blk {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hero-container .col2 {
+    width: 100%;
+  }
+
+  .hot-picks-section {
+    margin-bottom: 40px;
+  }
+
+  .hot-picks-section .l-inner {
+    flex-direction: column;
+  }
+
+  .hot-picks-card {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
