@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Day6 Tailwind</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="font-['Barlow'] text-[18px] font-[600]">
+    <header
+      class="w-full h-[600px] bg-[url('./images/mobile/image-header.jpg')] md:bg-[url('./images/desktop/image-header.jpg')] bg-cover bg-center flex flex-col"
+    >
+      <nav class="flex items-center justify-between p-8 relative z-50">
+        <a href="#"><img src="./images/logo.svg" alt="Logo" /></a>
+        <button id="menu-btn" class="md:hidden">
+          <img src="./images/icon-hamburger.svg" alt="Menu Toggle" />
+        </button>
+        <div
+          id="menu"
+          class="hidden absolute top-24 left-8 right-8 bg-white p-10 md:static md:flex md:bg-transparent md:p-0"
+        >
+          <div
+            class="md:hidden absolute -top-5 right-0 w-0 h-0 border-l-[25px] border-l-transparent border-b-[25px] border-b-white"
+          ></div>
+          <ul class="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 font-bold md:text-white transition duration-300 hover:opacity-70 md:hover:text-white/80"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 font-bold md:text-white transition duration-300 hover:opacity-70 md:hover:text-white/80"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 font-bold md:text-white transition duration-300 hover:opacity-70 md:hover:text-white/80"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="bg-yellow-500 text-gray-950 font-['Fraunces'] font-bold uppercase px-8 py-4 rounded-full md:bg-white transition duration-300 md:hover:bg-white/30 hover:text-white"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div
+        class="flex-grow flex flex-col items-center justify-start pt-24 md:pt-10 px-4 text-center"
+      >
+        <h1
+          class="text-white text-4xl md:text-6xl uppercase font-[Fraunces] font-[700] tracking-[0.2em] md:tracking-[0.1em] mb-16 md:mb-15"
+        >
+          We are creatives
+        </h1>
+        <img src="./images/icon-arrow-down.svg" alt="Down Arrow" />
+      </div>
+    </header>
+
+    <main class="flex flex-col">
+      <div class="flex flex-col-reverse md:flex-row h-auto">
+        <div
+          class="w-full md:w-1/2 flex items-center justify-center bg-white px-6 py-16 md:p-24"
+        >
+          <div class="max-w-md text-center md:text-left">
+            <h2
+              class="font-['Fraunces'] font-[900] text-4xl md:text-5xl text-gray-950 mb-8 leading-tight"
+            >
+              Transform your brand
+            </h2>
+            <p class="text-gray-600 mb-10 leading-relaxed">
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
+            </p>
+            <div class="relative inline-block group">
+              <a
+                href="#"
+                class="relative z-10 font-['Fraunces'] font-[900] text-gray-950 uppercase tracking-widest text-sm"
+                >Learn More</a
+              >
+              <div
+                class="absolute -bottom-1 -left-1 -right-1 h-3 bg-yellow-500 opacity-25 rounded-full transition transition:300 group-hover:opacity-100"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 min-h-[312px] md:h-auto">
+          <img
+            src="./images/mobile/image-transform.jpg"
+            class="w-full h-full object-cover md:hidden"
+            alt="Egg"
+          />
+          <img
+            src="./images/desktop/image-transform.jpg"
+            class="w-full h-full object-cover hidden md:block"
+            alt="Egg"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row h-auto">
+        <div class="w-full md:w-1/2 min-h-[312px] md:h-auto">
+          <img
+            src="./images/mobile/image-stand-out.jpg"
+            class="w-full h-full object-cover md:hidden"
+            alt="Cup"
+          />
+          <img
+            src="./images/desktop/image-stand-out.jpg"
+            class="w-full h-full object-cover hidden md:block"
+            alt="Cup"
+          />
+        </div>
+
+        <div
+          class="w-full md:w-1/2 flex items-center justify-center bg-white px-6 py-16 md:p-24"
+        >
+          <div class="max-w-md text-center md:text-left">
+            <h2
+              class="font-['Fraunces'] font-[900] text-4xl md:text-5xl text-gray-950 mb-8 leading-tight"
+            >
+              Stand out to the right audience
+            </h2>
+            <p class="text-gray-600 mb-10 leading-relaxed">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <div class="relative inline-block group">
+              <a
+                href="#"
+                class="relative z-10 font-['Fraunces'] font-[900] text-gray-950 uppercase tracking-widest text-sm"
+                >Learn More</a
+              >
+              <div
+                class="absolute -bottom-1 -left-1 -right-1 h-3 bg-red-400 opacity-25 rounded-full transition transition:300 group-hover:opacity-100"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row">
+        <div
+          class="relative w-full md:w-1/2 min-h-[600px] flex flex-col justify-end text-center pb-12 px-6 md:overflow-hidden"
+        >
+          <img
+            src="./images/mobile/image-graphic-design.jpg"
+            class="absolute inset-0 w-full h-full object-cover -z-10 md:hidden"
+            alt="Graphic Design Mobile"
+          />
+          <img
+            src="./images/desktop/image-graphic-design.jpg"
+            class="absolute inset-0 w-full h-full object-cover -z-10 hidden md:block"
+            alt="Graphic Design Desktop"
+          />
+
+          <div class="max-w-sm mx-auto">
+            <h3
+              class="font-['Fraunces'] font-[900] text-3xl mb-6 text-green-800"
+            >
+              Graphic Design
+            </h3>
+            <p class="text-green-800 leading-relaxed">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative w-full md:w-1/2 h-[600px] flex flex-col justify-end text-center pb-12 px-6"
+        >
+          <img
+            src="./images/mobile/image-photography.jpg"
+            class="absolute inset-0 w-full h-full object-cover -z-10 md:hidden"
+            alt="Photography Mobile"
+          />
+          <img
+            src="./images/desktop/image-photography.jpg"
+            class="absolute inset-0 w-full h-full object-cover -z-10 hidden md:block"
+            alt="Photography Desktop"
+          />
+
+          <div class="max-w-sm mx-auto">
+            <h3
+              class="font-['Fraunces'] font-[900] text-3xl mb-6 text-green-800"
+            >
+              Photography
+            </h3>
+            <p class="text-green-800 leading-relaxed">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="bg-white py-15 md:py-30 px-6">
+      <h2
+        class="font-['Fraunces'] font-[900] text-gray-400 uppercase tracking-[0.2em] text-center text-lg md:text-xl mb-16 md:mb-20"
+      >
+        Client Testimonials
+      </h2>
+
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 md:gap-8 items-center justify-center"
+      >
+        <div class="flex flex-col items-center text-center max-w-sm">
+          <img
+            src="./images/image-emily.jpg"
+            alt="Emily"
+            class="w-16 h-16 rounded-full mb-10 md:mb-14"
+          />
+          <p class="text-gray-600 leading-relaxed mb-8">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div>
+            <h3 class="font-['Fraunces'] font-[900] text-gray-950 text-lg mb-2">
+              Emily R.
+            </h3>
+            <p class="text-gray-400 text-sm">Marketing Director</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center max-w-sm">
+          <img
+            src="./images/image-thomas.jpg"
+            alt="Thomas"
+            class="w-16 h-16 rounded-full mb-10 md:mb-14"
+          />
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div>
+            <h3 class="font-['Fraunces'] font-[900] text-gray-950 text-lg mb-2">
+              Thomas S.
+            </h3>
+            <p class="font-['Barlow'] font-[600] text-gray-400 text-sm">
+              Chief Operating Officer
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center max-w-sm">
+          <img
+            src="./images/image-jennie.jpg"
+            alt="Jennie"
+            class="w-16 h-16 rounded-full mb-10 md:mb-14"
+          />
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <div>
+            <h3 class="font-['Fraunces'] font-[900] text-gray-950 text-lg mb-2">
+              Jennie F.
+            </h3>
+            <p class="font-['Barlow'] font-[600] text-gray-400 text-sm">
+              Business Owner
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-wrap">
+      <div class="w-1/2 md:w-1/4 aspect-square">
+        <img
+          src="./images/mobile/image-gallery-milkbottles.jpg"
+          class="w-full h-full object-cover md:hidden"
+          alt="Milk"
+        />
+        <img
+          src="./images/desktop/image-gallery-milkbottles.jpg"
+          class="w-full h-full object-cover hidden md:block"
+          alt="Milk"
+        />
+      </div>
+      <div class="w-1/2 md:w-1/4 aspect-square">
+        <img
+          src="./images/mobile/image-gallery-orange.jpg"
+          class="w-full h-full object-cover md:hidden"
+          alt="Orange"
+        />
+        <img
+          src="./images/desktop/image-gallery-orange.jpg"
+          class="w-full h-full object-cover hidden md:block"
+          alt="Orange"
+        />
+      </div>
+      <div class="w-1/2 md:w-1/4 aspect-square">
+        <img
+          src="./images/mobile/image-gallery-cone.jpg"
+          class="w-full h-full object-cover md:hidden"
+          alt="Cone"
+        />
+        <img
+          src="./images/desktop/image-gallery-cone.jpg"
+          class="w-full h-full object-cover hidden md:block"
+          alt="Cone"
+        />
+      </div>
+      <div class="w-1/2 md:w-1/4 aspect-square">
+        <img
+          src="./images/mobile/image-gallery-sugar-cubes.jpg"
+          class="w-full h-full object-cover md:hidden"
+          alt="Sugar"
+        />
+        <img
+          src="./images/desktop/image-gallery-sugarcubes.jpg"
+          class="w-full h-full object-cover hidden md:block"
+          alt="Sugar"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-[hsl(167,34%,41%)] py-16 flex flex-col items-center">
+      <a href="#" class="text-3xl font-[900] text-green-800 mb-10">
+        sunnyside
+      </a>
+
+      <ul class="flex gap-10 mb-20">
+        <li>
+          <a href="#" class="text-green-800 transition-colors hover:text-white"
+            >About</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-green-800 transition-colors hover:text-white"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-green-800 transition-colors hover:text-white"
+            >Projects</a
+          >
+        </li>
+      </ul>
+
+      <div class="flex gap-7">
+        <a href="#" class="group">
+          <img
+            src="./images/icon-facebook.svg"
+            alt="Facebook"
+            class="transition duration-300 group-hover:brightness-0 group-hover:invert"
+          />
+        </a>
+        <a href="#" class="group">
+          <img
+            src="./images/icon-instagram.svg"
+            alt="Instagram"
+            class="transition duration-300 group-hover:brightness-0 group-hover:invert"
+          />
+        </a>
+        <a href="#" class="group">
+          <img
+            src="./images/icon-twitter.svg"
+            alt="Twitter"
+            class="transition duration-300 group-hover:brightness-0 group-hover:invert"
+          />
+        </a>
+        <a href="#" class="group">
+          <img
+            src="./images/icon-pinterest.svg"
+            alt="Pinterest"
+            class="transition duration-300 group-hover:brightness-0 group-hover:invert"
+          />
+        </a>
+      </div>
+    </footer>
+    <script src="./js/style.js"></script>
+  </body>
+</html>
