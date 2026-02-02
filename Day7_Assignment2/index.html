@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Day7 Assignment2</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Red Hat Text", sans-serif;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body class="p-6 md:p-12 lg:p-20">
+    <main class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2 md:gap-8">
+        <h1 class="text-4xl font-bold mb-8">Desserts</h1>
+        <div
+          id="product-list"
+          class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10"
+        ></div>
+      </div>
+
+      <div class="h-fit sticky top-10">
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h2 class="text-2xl font-bold text-[#c73a0f] mb-6">
+            Your Cart (<span id="cart-count">0</span>)
+          </h2>
+
+          <div id="cart-content">
+            <div id="empty-state" class="flex flex-col items-center py-10">
+              <img
+                src="./assets/images/illustration-empty-cart.svg"
+                alt="Empty Cart"
+              />
+              <p class="text-stone-500 font-semibold mt-4 text-sm">
+                Your added items will appear here
+              </p>
+            </div>
+
+            <div id="cart-items-list" class="divide-y divide-stone-100"></div>
+
+            <div id="cart-footer" class="hidden pt-6 mt-4">
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-stone-600">Order Total</span>
+                <span id="order-total" class="text-2xl font-bold text-stone-900"
+                  >$0.00</span
+                >
+              </div>
+
+              <div
+                class="bg-[#fcf9f7] p-4 rounded-lg flex items-center justify-center gap-2 mb-6"
+              >
+                <img
+                  src="./assets/images/icon-carbon-neutral.svg"
+                  alt="carbon-neutral"
+                />
+                <span class="text-sm"
+                  >This is a
+                  <span class="font-bold">carbon-neutral</span> delivery</span
+                >
+              </div>
+
+              <button
+                onclick="showModal()"
+                class="w-full bg-[#c73a0f] text-white py-4 rounded-full font-semibold hover:bg-[#a02f0c] transition duration-200"
+              >
+                Confirm Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black/50 z-50 flex items-end md:items-center justify-center"
+    >
+      <div
+        class="bg-white w-full md:max-w-md p-8 rounded-t-2xl md:rounded-2xl max-h-[90vh] overflow-y-auto"
+      >
+        <img
+          src="./assets/images/icon-order-confirmed.svg"
+          class="mb-4"
+          alt="Confirmed"
+        />
+        <h2 class="text-3xl font-bold mb-2">Order Confirmed</h2>
+        <p class="text-stone-500 mb-6 text-sm">We hope you enjoy your food!</p>
+
+        <div
+          id="modal-summary"
+          class="bg-[#fcf9f7] p-4 rounded-lg divide-y divide-stone-200"
+        ></div>
+
+        <button
+          onclick="resetOrder()"
+          class="w-full bg-[#c73a0f] text-white py-3 rounded-full font-semibold mt-6 hover:bg-[#a02f0c] transition duration-200"
+        >
+          Start New Order
+        </button>
+      </div>
+    </div>
+    <script src="./js/style.js"></script>
+  </body>
+</html>
