@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("../assets/fonts/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF");
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+
+@theme {
+  --font-bahn: "Bahnschrift", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-primary: #D71920;
+  --color-secondary: #0E3178;
+  --color-tertiary: #00984A;
+  --color-primary-text: #444444;
+  --color-secondary-text: #606060;
+  --color-disabled: #A7A7A7;
+  --color-outline: #00000015;
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+}

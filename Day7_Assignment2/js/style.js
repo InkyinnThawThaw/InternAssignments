@@ -71,7 +71,7 @@ function changeQty(id, amt) {
       cart = cart.filter((i) => i.id !== id);
     }
   }
-  updateUI();
+  updateUI(); 
 }
 
 function updateUI() {
@@ -164,7 +164,7 @@ function resetOrder() {
 
   const modal = document.getElementById("modal");
   modal.classList.add("hidden");
-  document.body.style.overflow = "auto";
+  document.body.style.overflow = "auto";  
 }
 
 initApp();
