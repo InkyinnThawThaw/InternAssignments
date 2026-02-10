@@ -2,26 +2,26 @@
 
 @font-face {
   font-family: "Bahnschrift";
-  src: url("../assets/fonts/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF");
   font-weight: 100 900;
+  src: url("../assets/fonts/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF");
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
   font-weight: 400;
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf");
   font-weight: 500;
+  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf");
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf");
   font-weight: 700;
+  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf");
 }
 
 @theme {
@@ -37,4 +37,14 @@
   --color-outline: #00000015;
   --color-background: #F5F5F5;
   --color-surface: #FFFFFF;
+}
+
+[data-carousel-slide-to][aria-current="true"] {
+  background-color: #0E3178;
+  @apply ring ring-secondary ring-offset-2 scale-100;
+}
+
+[data-carousel-slide-to][aria-current="false"] {
+  background-color: transparent;
+  @apply bg-secondary/50 w-1.5 h-1.5 md: w-2 md:h-2;
 }
